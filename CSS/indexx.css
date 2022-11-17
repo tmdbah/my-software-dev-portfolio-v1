@@ -1,0 +1,442 @@
+/* --------------------------------------------------------------------- Element Selectors */
+/* --------------------------------- Text, Spacing, Format and Color */ 
+/* ------------------------------------------------------------------------------------------- G L O B A L _ P A R A L L A X _ S T Y L E ---->  */
+ body, html {
+    height: 100%;
+    margin: 0;
+    color: #777;
+    line-height: 1.8;
+}
+
+h1, h2, h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Raleway", sans-serif;
+}
+
+h1 {
+    font: 25px "Lato", sans-serif;
+}
+
+h2 {
+    font: 20px "Lato", sans-serif;
+    text-align: center;
+}
+
+h3 {
+    font: 15px "Lato", sans-serif;
+    color: #111;
+}
+
+b:hover {
+    background-color: black;
+    color: lime;
+}
+
+a {
+    text-decoration: none;
+  }
+
+  * {
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------------------------------------- T A B L E _ S T Y L E S ---->  */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 0px solid lime;
+    text-align: center;
+    padding: 4px;
+}
+
+th:hover {
+    background-color: black;
+    opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------- Class Selectors */
+/* ----------------------------------------------------------------------------------------- B K G _ S T Y L E ---->  */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
+    position: relative;
+    opacity: .90;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ----------------------------------------------------------------------------------------- B K G _ I M G ' S ---->  */
+.bgimg-1 {
+    background-image: url("IMG/615504_366984070054201_618233153_o.jpg");
+    min-height: 100%;
+}
+
+.bgimg-2 {
+    background-image: url("IMG/_MG_0095.jpg");
+    min-height: 100%;
+}
+
+.bgimg-3 {
+    background-image: url("IMG/_MG_0103.JPG");
+    min-height: 100%;
+}
+
+.bgimg-4 {
+    background-image: url('IMG/665742_366984023387539_857536910_o.jpg');
+    min-height: 100%;
+}
+
+.bgimg-5 {
+    background-image: url('IMG/diego-ph-5LOhydOtTKU-unsplash.jpg');
+    min-height: 100%;
+    
+}
+
+.bgimg-6 {
+    background-image: url('IMG/hue2.jpg');
+    min-height: 100%;
+   
+}
+
+.bgimg-7 {
+    background-image: url('IMG/clay-banks-z-D0pyZRNkA-unsplash.jpg');
+    min-height: 100%;
+    
+}
+
+/* ----------------------------------------------------------------------------------------- C A P T I O N _ S T Y L E ---->  */
+.caption {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+/* ----------------------------------------------------------------------------------------- P A R A G R A P H _ S T Y L E S ---->  */
+
+.p3 {
+    color: black;
+    font: 15px "Lato", sans-serif;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color:transparent;
+    border: none;
+    border-radius: 0%;
+    box-shadow: 0 0px #999;
+}
+
+    .button:hover {
+        background-color: lime;
+        color: #000;
+    }
+
+    .button:active {
+        background-color: lime;
+        color: #000;
+        box-shadow: 0 5px LIME;
+        transform: translateY(4px);
+}
+
+/* Style buttons */
+.btn {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: Lime;
+    color: #000;
+  }
+
+.note {
+    font-style: italic;
+    color: white;
+    background-color: #000;
+    font-size: 10px;
+}
+
+.proj {
+    color: lime;
+    font: .6rem Inconsolata, monospace;
+}
+
+.whiteIcon {
+    color: white;
+}
+
+.whiteBorder {
+    border: 1.5px solid white;
+    font: .8rem Inconsolata, monospace;
+}
+
+.terminalLook {
+  margin: 0;
+  overflow: hidden;
+  padding: 2rem;
+  color: lime;
+
+  font: 5rem Inconsolata, monospace;
+  text-shadow: 0 0 5px black;
+  -webkit-text-stroke-width: .75px;
+            -webkit-text-stroke-color: black;
+}
+
+::selection {
+    background: #0080FF;
+    text-shadow: none;
+    color: white;
+  }
+
+  /* --------------------------------- Text, Spacing, Format and Color */
+.letterSpacing {
+    letter-spacing: .5rem;
+}
+
+/* --------------------- Descendant Selectors */
+
+  /* ----------------------------------------------------------------------------------------- C A P / B O R D E R _ S T Y L E ---->  */
+  .caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 14px;
+    letter-spacing: 10px;
+    
+}
+  
+/* -------------------------------------------------------------------- R E S P O N S I V E _ S T Y L E S + @ M E D I A _ Q U E R I E S ---->  */
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+        background-attachment: scroll;
+    }
+}
+
+/* If the screen size is 601px wide or more, set the font-size of styles to 20px */
+@media screen and (min-width: 601px) {
+    body, html, .p3, .caption span.border, h1, h2, h3 {
+        font-size: 20px;
+    }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of styles to 15px */
+@media screen and (max-width: 600px) {
+    body, html, .p3, .caption span.border, h1, h2, h3 {
+        font-size: 15px;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------- S L I D E R _ S T Y L E ---->  */
+
+/*------------------------------------------------------------------------------------------------ Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/*--------------------------------------------------------------------------------------------- Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/*--------------------------------------------------------------------------------------------- Next + previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 38px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/*---------------------------------------------------------------------------- Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*-------------------------------------------------------- On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: lime;
+}
+
+/*--------------------------------------------------------------------------------------- Caption text */
+.text {
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/*------------------------------------------------------------------------- Number text (1/3 etc) */
+.numbertext {
+    color: white;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/*--------------------------------------------------------------------- The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 10px;
+    background-color: #777777;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: lime;
+}
+
+/*------------------------------------------------------------------- Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    #myImg:hover {
+        opacity: 0.7;
+    }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+
+}

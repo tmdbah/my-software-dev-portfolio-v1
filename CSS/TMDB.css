@@ -1,0 +1,105 @@
+body {
+    /* background: no-repeat center/cover url('img/karl-pawlowicz-QUHuwyNgSA0-unsplash.jpg'); */
+
+    /* background-image: url('img/karl-pawlowicz-QUHuwyNgSA0-unsplash.jpg'); */
+    /* background-size: cover; */
+    /* background-position: bottom; */
+    background-color: #151b29;
+
+    font-family: 'Roboto', sans-serif;
+    color: #ffa260;
+}
+
+main {
+    width: 60%;
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+button {
+    background: none;
+    color: #ffa260;
+    border: solid;
+    padding: 1em 2em;
+    font-size: 1em;
+    transition: border-color 0.25s, color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+button:hover {
+    border-color: #f1ff5c;
+    color: white;
+    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+h1 {
+    /* FONT */
+    font-family: monospace;
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: 20px;
+    /* TXT */
+    text-transform: uppercase;
+    text-align: center;
+    /* text-decoration: underline wavy #ffa260; */
+
+    background-color: black;
+
+    width: 1000px;
+    height: 100px;
+     /* border */
+    border:3px solid black;
+    border-radius: 15px;
+    border-left-width: 24px;
+     /* BOX */
+    box-sizing: border-box;
+
+    /* Margin */
+    margin: 0px auto;
+}
+
+h2 {
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 20px;
+    
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline dotted black;
+}
+
+.links ul {
+    list-style-type: none; /* Remove bullets */
+}
+
+.links {
+    /* Margin */
+    margin: 0px auto;
+    text-align: center;
+}
+
+.links li:hover {
+    color:tomato;
+}
+
+.circle {
+    margin: 10px auto;
+    width: 300px;
+    height: 300px;
+    background-color: #151b29;
+    transition: background-color 1.5s ease-in, border-radius 2s;
+}
+
+.circle:hover {
+    border-radius: 50%;
+    background-color: #ffa260;
+}
+

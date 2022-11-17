@@ -1,0 +1,110 @@
+body, html {
+    background: #000000;
+    font-family: "Nunito", sans-serif;
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 1.3rem;
+
+    scroll-behavior: smooth;
+
+}
+
+h4 {
+    color: #EA1c2c;
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+hr {
+    color: lime;
+    font-weight: 100;
+}
+
+svg:hover{
+    fill:#EA1c2c;
+}
+
+.blurb h2 {
+    color: #EA1c2c;
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
+.blurb p {
+    color: #ffffff;
+    font-weight: 150;
+    font-size: 1.125rem;
+    line-height: 2;
+}
+
+.content {
+    margin-top: 100px;
+}
+
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#mainNavbar .navbar-brand {
+    color: lime;
+    font-weight: 400;
+}
+
+#mainNavbar .nav-link {
+    color: white;
+}
+
+#mainNavbar .nav-link:hover {
+    color: lime;
+}
+
+#headingGroup span {
+    color: lime;
+}
+
+#headingGroup h1 {
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
+#headingGroup h3 {
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+.navbar.scrolled {
+    background: rgb(133, 130, 133);
+    transition: background 550ms;
+}
+
+@media (max-width: 1200px) {
+    #headingGroup h1 {
+        font-weight: 100;
+        font-size: 2rem;
+    }
+
+    #headingGroup h3 {
+        font-weight: 100;
+        font-size: 1.5rem;
+    }
+
+}
+
+/* Skills Grid */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: black;
+    padding: 1px;
+  }
+  .grid-item {
+    background-color: black;
+    border: 0px solid lime;
+    padding: 60px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+ 
