@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TMDBAH</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body,
+        html {
+            height: 100%;
+            line-height: 1.8;
+            margin: 0;
+            color: #777;
+        }
+
+        a {
+    text-decoration: none;
+        }
+
+        /* Full height image header */
+        .bgimg-1, .bgimg-2 {
+            position: relative;
+          
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            
+            
+        }
+
+        .bgimg-1 {
+            background-image: url("IMG/dockerBlue.jpg");
+            min-height: 100%;
+        }
+
+        .bgimg-2 {
+            background-image: url("IMG/quinton-coetzee-u-n1AFjUclo-unsplash.jpg");
+            min-height: 100%;
+        }
+
+
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+
+        .terminalLook {
+  margin: 0;
+  overflow: hidden;
+  padding: 2rem;
+  color: lime;
+
+  font: 5rem Inconsolata, monospace;
+  text-shadow: 0 0 5px black;
+  -webkit-text-stroke-width: .75px;
+            -webkit-text-stroke-color: black;
+}
+
+.proj {
+    color: lime;
+    font: 1.2rem Inconsolata, monospace;
+}
+
+.docker {
+    color: yellow;
+    font: 1.2rem Inconsolata, monospace;
+}
+
+.grayTXT {
+    color: gray;
+    font: 1.2rem Inconsolata, monospace;
+}
+
+.whiteBorder {
+    border: 1.5px solid white;
+    font: 2rem Inconsolata, monospace;
+}
+
+        /* txtLimeColor */
+        #txtLimeColor {
+            color: LIME;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a href="index.html" class="w3-bar-item w3-button w3-wide">TMDBAH</a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="#about" class="w3-bar-item w3-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lime" class="bi bi-code-slash"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                </svg> TECH STACK</a>
+                <a href="#term" class="w3-bar-item w3-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lime" class="bi bi-code-slash"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                </svg> CODE</a>
+
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close
+            ×</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">[ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lime" class="bi bi-code-slash"
+            viewBox="0 0 16 16">
+            <path
+                d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+        </svg> ] TECH STACK</a>
+        <a href="#term" onclick="w3_close()" class="w3-bar-item w3-button">[ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lime" class="bi bi-code-slash"
+            viewBox="0 0 16 16">
+            <path
+                d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+        </svg> ] CODE</a>
+        
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container" id="home">
+        <div class="w3-display-left w3-text-white" style="padding:48px">
+            <span id="txtLimeColor" class="w3-jumbo w3-hide-small">Docker Project</span><br>
+            <span id="txtLimeColor" class="w3-xxlarge w3-hide-large w3-hide-medium">Docker Project</span><br>
+            <span class="w3-xlarge">Part I: I will build a docker container, deploy a sample application & update the application. </span><br />
+            <span class="w3-xlarge">Part II: Docker with Qwiklabs. (Introduction to Docker, KubernetesEngine: Qwik Start and Orchestrating the Cloud with Kubernetes Labs). </span><br />
+            <p><a href="#about"
+                    class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lime" class="bi bi-code-slash"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                    </svg> Featured Technology</a></p>
+        </div>
+        <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+           
+            <a href="https://github.com/tmdbah/" target="blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+                &nbsp; &nbsp;
+                <a href="https://www.linkedin.com/in/tmdbah224/" target="blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+                &nbsp; &nbsp;
+                <a class="proj w3-hover-opacity" href="https://www.hackerrank.com/tmdbah" target="blank"><img style="color: white;" class="w3-image" src="IMG/icons8-hackerrank-32.png" alt="article link"> HackerRank</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="w3-container" style="padding:128px 16px" id="about">
+        <h1 class="w3-center"> T E C H &nbsp; S T A C K </h1>
+        <div class="w3-row-padding w3-center" style="margin-top:64px">
+            <div class="w3-quarter">
+                <i><img class="img-fluid" src="IMG/docker.png" alt="docker"></i>
+                <p class="w3-large">Docker</p>
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p> -->
+            </div>
+            <div class="w3-quarter">
+                <img class="img-fluid" src="IMG/kuber.png" alt="Kubernetes">
+                <p class="w3-large">Kubernetes</p>
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p> -->
+            </div>
+            <div class="w3-quarter">
+                <img class="img-fluid" src="IMG/powershell.png" alt="powershell">
+                <p class="w3-large">Powershell</p>
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p> -->
+            </div>
+            <div class="w3-quarter">
+                <img class="img-fluid" src="IMG/vscode.png" alt="vscode">
+                <p class="w3-large">Visual Studio Code</p>
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p> -->
+            </div>
+        </div>
+        <br/>
+        <h2 class="w3-center"> TABLE OF CONTENTS </h2>
+        <br/>
+
+        <p class="w3-center w3-large"><span class="proj">> 01.</span> Part I: Build a docker container (screenshots of major steps).</p>
+        <p class="w3-center w3-large"><span class="proj">> a.</span> Step 1: Getting Started.</p>
+        <p class="w3-center w3-large"><span class="proj">> b.</span> Step 2: Sample Application.</p>
+        <p class="w3-center w3-large"><span class="proj">> c.</span> Step 3: Update the Application.</p>
+        <p class="w3-center w3-large"><span class="proj">> 02.</span> Part II: Docker with Qwiklabs (Screenshot showing 3 finished Qwiklabs)</p>
+
+        
+    </div>
+
+    <!-- Promo Section - "We know design" -->
+    <div class="bgimg-2 w3-container w3-black" style="padding:50px 10px" id="term">
+        <h1 class="w3-center terminalLook"> TERMINAL. </h1>
+        <br/>
+        <div class="w3-row-padding">
+            <div class="w3-col m6">
+                <h2 class="whiteBorder">> 01.  Part I: Build a docker container (screenshots of major steps).</h2>
+                <h2>Step 1: Getting Started.</h2>
+                
+                <h3>a. First, clone a repository:</h3>
+                <h6>PS C:\Users\tmdba><span class="proj"><span class="docker"> docker</span> run <span class="grayTXT">--name</span> repo alpine/git clone https://github.com/docker/getting-started.git</span></h6>
+                <h6>PS C:\Users\tmdba><span class="proj"><span class="proj"><span class="docker"> docker</span></span> cp repo:/get/getting-started/   .</h6>
+               
+                <h3>b. Now, build the image.</h3>
+                <h6>PS C:\Users\tmdba><span class="proj"><span class="proj"><span class="docker"> cd</span></span> getting-started</h6>
+                <h6>PS C:\Users\tmdba\getting-started><span class="proj"><span class="proj"><span class="docker"> docker</span></span> build <span class="grayTXT">-t</span> docker101tutor</h6>
+                
+                <h3>c. Run your first container.</h3>
+                <h6>PS C:\Users\tmdba\getting-started><span class="proj"><span class="proj"><span class="docker"> docker</span></span> run <span class="grayTXT">-d -p</span> 80:80 <span class="grayTXT">--name </span>docker-tutorial docker101tutorial</h6>
+                
+                <h3>d. Now save and share your image.</h3>
+                <h6>PS C:\Users\tmdba\getting-started><span class="proj"><span class="proj"><span class="docker"> docker</span></span> tag docker-tutorial docker101tutorial tmdb/docker101tutorial</h6>
+                <h6>PS C:\Users\tmdba\getting-started><span class="proj"><span class="proj"><span class="docker"> docker</span></span> push tmdb/docker101tutorial</h6>
+                
+                <h2>Step 2: Sample Application.</h2>
+                <h6>Dockerfile ></h4>
+                <h6>FROM  <span class="docker"> NODE</span><span class="proj">:12-alpine</span></h6>
+                <h6>RUN  <span class="proj">apk add --no-cache python g++ make</span></h6>
+                <h6>WORKDIR  <span class="proj">/app</span></h6>
+                <h6>COPY  <span class="proj"><span class="proj">.  .</span></h6>
+                <h6>RUN  <span class="proj">yarn install --production</span></h6>
+                <h6>CMD  <span class="proj">[</span><span class="grayTXT">"node", "src/index.js"</span><span class="proj">]</span></h6>
+                <h6>...</h6>
+                <h3>a. Build , and run application.</h3>
+                <h6>PS C:\Users\tmdba\Downloads\app\app><span class="docker"> docker</span> build <span class="grayTXT">-t</span> getting-started .</h6>
+                <h6>PS C:\Users\tmdba\Downloads\app\app><span class="docker"> docker</span> run <span class="grayTXT">-dp</span> 3000:3000 getting-started 2e33c7a52f13ce4385f60248df90d54f254f254005d987147a45c1f3a700e4473</h6>
+
+                <h2>Step 3: Update the Application.</h2>
+
+                <h3>a. Update the source code.</h3>
+
+                <h6>app.js ></h6>
+
+                <h6>const <span class="proj"> onItemRemoval = <span class="docker">React</span>.useCallback</span>(</h6>
+                <h6>    item <span class="proj"> => </span>(</h6>
+                <h6>        const <span class="proj"> index = items.findIndex </span>(<span class="proj"> i = i.id === item.id</span>);9</h6>
+                <h6>...</h6>
+                
+                <h3>a. Build updated image.</h3>
+                <h6>PS C:\Users\tmdba\Downloads\app\app><span class="docker"> docker</span> build <span class="grayTXT">-t</span> getting-started .</h6>
+                <h3>b. Remove old container if still running.</h3>
+                <h6>PS C:\Users\tmdba\Downloads\app\app><span class="docker"> docker</span> ps</h6>
+                <h6>PS C:\Users\tmdba\Downloads\app\app><span class="docker"> docker</span> stop 2e33c7a52f1</h6>
+                <h6>PS C:\Users\tmdba\Downloads\app\app><span class="docker"> docker</span> rm 2e33c7a52f1</h6>
+                <h6>PS C:\Users\tmdba\Downloads\app\app><span class="docker"> docker</span> ps</h6>
+                <h3>b. Start the updated app container.</h3>
+                <h6>PS C:\Users\tmdba\Downloads\app\app><span class="docker"> docker</span> run <span class="grayTXT">-dp</span> 3000:3000 getting-started 42ff7169b1d7970a7a...</h6>
+                
+                <h2 class="whiteBorder">> 02.   Part II: Docker with Qwiklabs.</h2>
+                <h2>> Lab 01: Introduction to Docker.</h2>
+                <h2>> Lab 02: KubernetesEngine: Qwik Start.</h2>
+                <h2>> Lab 03: Orchestrating the Cloud with Kubernetes.</h2>
+
+                <br/>
+                
+
+
+                <p><a href="index.html" class="w3-button w3-black">TMDBAH</a></p>
+            </div>
+            <div class="w3-col m6">
+                <img class="w3-image w3-round-large" src="IMG/dockercode.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode2.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode3.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode4.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode5.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode6.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode7.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode8.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode9.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode10.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode11.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode12.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode13.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode14.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode15.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode16.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode17.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode18.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode19.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode20.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode21.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode22.png" alt="Buildings" width="700" height="394">
+                <br/>
+                <img class="w3-image w3-round-large" src="IMG/dockercode23.png" alt="Buildings" width="700" height="394">
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <br/>
+        <br/>
+        <div class="w3-xlarge w3-section">
+                <a href="https://github.com/tmdbah/" target="blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+                &nbsp; &nbsp;
+                <a href="https://www.linkedin.com/in/tmdbah224/" target="blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+                &nbsp; &nbsp;
+                <a class="proj w3-hover-opacity" href="https://www.hackerrank.com/tmdbah" target="blank"><img style="color: white;" class="w3-image" src="IMG/icons8-hackerrank-32.png" alt="article link"> HackerRank</a>
+        </div>
+       
+    </footer>
+
+    <script>
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
